@@ -89,7 +89,7 @@ export default class View {
   addHandlerUpdateServings(handler) {
     this._parentElement.addEventListener('click', e => {
       // debugger;
-      const { updateTo } = this.servingsUpdator(e);
+      const updateTo = this.servingsUpdator(e)?.updateTo;
       if (+updateTo > 0) handler(+updateTo);
     });
   }
